@@ -2,13 +2,12 @@ import { useState } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Login from "./components/login/Login";
 
-
 const App = () => {
   const [isSignedIn, setIsSignedIn] = useState(false);
 
-   const handleLogin = () => {
+  const handleLogin = () => {
     setIsSignedIn(true);
-  }
+  };
 
   return (
     <div>
@@ -19,8 +18,6 @@ const App = () => {
         </Routes>
       </BrowserRouter>
     </div>
-  )
-
-
-  }
-export default App
+  );
+};
+export default App;
