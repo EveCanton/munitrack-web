@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Card, Col, Form, FormGroup, Row } from "react-bootstrap";
 import './Login.css';
+import logo from '../../assets/logoMuniTrack.png';
 
 const Login = ({onLogin}) => {
     const [dni, setDni] = useState('');
@@ -63,20 +64,28 @@ const Login = ({onLogin}) => {
             <div className="login-container">
                 <div className="login-left"></div>
                 <div className="login-right">
-                    <h1 className="login-title">MuniTrack</h1>
+                    <img src={logo} alt="MuniTrack Logo" className="login-logo" />
                     <Form className="login-form" onSubmit={handleSubmit}>
                     <Form.Control
+                        className={errors.dni ? "border border-danger" : ""}
                         type="text"
                         placeholder="N° de Legajo o DNI"
                         value={dni}
                         onChange={handleChangeDni}
+                        ref={dniRef}
                     />
+                    {errors.email &&
+                            <p className="text-danger mt-2">Debe completar el campo email</p>}
                     <Form.Control
+                        className={errors.password && "border border-danger"}
                         type="password"
-                        placeholder="Contraseña"
+                        placeholder="Ingresar Contraseña"
                         value={password}
                         onChange={handleChangePassword}
+                        ref={passwordRef}
                     />
+                    errors.password &&
+                            <p className="text-danger mt-2">Debe completar el campo password</p>
                     <div className="login-links">
                         <span>¿Olvidaste tu contraseña?</span>
                         <span>Registrarse</span>
