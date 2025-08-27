@@ -54,6 +54,17 @@ const CreateCitizen = () => {
                 placeholder="Mail"
               />
             </div>
+            <div class="col-8">
+              <label for="inputMail" class="form-label">
+                Direccion
+              </label>
+              <input
+                type="email"
+                class="form-control"
+                id="inputDireccion"
+                placeholder="Direccion"
+              />
+            </div>
 
             <div class="col-8">
               <label for="inputCelular" class="form-label">
