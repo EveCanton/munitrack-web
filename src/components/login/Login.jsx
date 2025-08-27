@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Button, Card, Col, Form, FormGroup, Row } from "react-bootstrap";
+import { Form, FormGroup} from "react-bootstrap";
 import './Login.css';
 import logo from '../../assets/logoMuniTrack.png';
 
@@ -61,36 +61,52 @@ const Login = ({onLogin}) => {
     }
   
         return (
-            <div className="login-container">
-                <div className="login-left"></div>
-                <div className="login-right">
-                    <img src={logo} alt="MuniTrack Logo" className="login-logo" />
-                    <Form className="login-form" onSubmit={handleSubmit}>
-                    <Form.Control
-                        className={errors.dni ? "border border-danger" : ""}
-                        type="text"
-                        placeholder="N° de Legajo o DNI"
-                        value={dni}
-                        onChange={handleChangeDni}
-                        ref={dniRef}
-                    />
-                    {errors.email &&
-                            <p className="text-danger mt-2">Debe completar el campo email</p>}
-                    <Form.Control
-                        className={errors.password && "border border-danger"}
-                        type="password"
-                        placeholder="Ingresar Contraseña"
-                        value={password}
-                        onChange={handleChangePassword}
-                        ref={passwordRef}
-                    />
-                    errors.password &&
-                            <p className="text-danger mt-2">Debe completar el campo password</p>
-                    <div className="login-links">
-                        <span>¿Olvidaste tu contraseña?</span>
-                        <span>Registrarse</span>
+            <div className="login template d-flex justify-content-center align-items-center vh-100 bg-primary">
+                <div className='form_container p-5 rounded bg-white'>
+                    <h3 className='text-center'>MuniTrack</h3>
+                    <Form onSubmit={handleSubmit}>
+                    <FormGroup className='mb-2'>
+                        <Form.Control
+                            className={errors.dni ? "border border-danger" : ""}
+                            type="text"
+                            placeholder="N° de Legajo o DNI"
+                            value={dni}
+                            onChange={handleChangeDni}
+                            ref={dniRef}
+                        />
+                        {errors.email && (
+                                <p className="text-danger mt-2">Debe completar el campo email</p>
+                        )}
+                    </FormGroup>
+                    <FormGroup className='mb-2'>
+                        <Form.Control
+                            className={errors.password && "border border-danger"}
+                            type="password"
+                            placeholder="Ingresar Contraseña"
+                            value={password}
+                            onChange={handleChangePassword}
+                            ref={passwordRef}
+                        />
+                        
+                        {errors.password && (
+                                <p className="text-danger mt-2">Debe completar el campo password</p>
+                        )}
+                    </FormGroup>
+                    <div className='mb-2'>
+                        <input type="checkbox" className='custom-control custom-checkbox' id='check'/>
+                        <label htmlFor="check" className='custom-input-label ms-2'>
+                            Recordarme
+                        </label>
                     </div>
-                    <button type="submit" className="login-button">Ingresar</button>
+                    <div className='d-grid'>
+                        <button className='btn btn-primary' type="submit" >Ingresar</button>
+                    </div>
+                    <p className='text-end mt-2'>
+                        Olvide mi <a href="">Contraseña?</a>
+                    </p>
+                    <p className='text-end mt-1'>
+                        <a Link to="/Operator" className='ms-2'>Registrarme</a>
+                        </p>
                     </Form>
                 </div>
                 </div>
