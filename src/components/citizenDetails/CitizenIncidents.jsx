@@ -49,7 +49,7 @@ const CitizenIncidents = ({ ciudadano }) => {
       </div>
       <div className="d-flex justify-content-end mt-3 mb-3">
         <button className="btn btn-primary" id='styleButton'>
-          <i className="bi bi-plus-circle me-2"></i> Agregar Incidencia
+          <i class="bi bi-plus-circle-fill"></i> Agregar Incidencia
         </button>
       </div>
     </div>
