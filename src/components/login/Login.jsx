@@ -61,7 +61,7 @@ const Login = ({onLogin}) => {
     }
   
         return (
-            <div className="login template d-flex justify-content-center align-items-center vh-100 bg-primary">
+            <div className="login template d-flex justify-content-center align-items-center vh-100 " id="login-page">
                 <div className='form_container p-5 rounded bg-white'>
                     <h3 className='text-center'>MuniTrack</h3>
                     <Form onSubmit={handleSubmit}>
@@ -99,14 +99,11 @@ const Login = ({onLogin}) => {
                         </label>
                     </div>
                     <div className='d-grid'>
-                        <button className='btn btn-primary' type="submit" >Ingresar</button>
+                        <button id='buttonLogin' className='btn' type="submit" >Ingresar</button>
                     </div>
                     <p className='text-end mt-2'>
-                        Olvide mi <a href="">Contraseña?</a>
+                        Olvide mi <a href="">Contraseña?<a Link to="/Operator" className='ms-2'>Registrarme</a></a>
                     </p>
-                    <p className='text-end mt-1'>
-                        <a Link to="/Operator" className='ms-2'>Registrarme</a>
-                        </p>
                     </Form>
                 </div>
                 </div>

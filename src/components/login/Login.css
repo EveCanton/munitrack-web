@@ -1,3 +1,4 @@
+
 .form_container {
     width: 30%;
 }
@@ -10,4 +11,14 @@
     .form_container{
         width: 65% ;
     }
+}
+#login-page, #buttonLogin {
+  background-color: #502EAC;
+}
+
+#buttonLogin:hover {
+  background-color: #08a18e;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
