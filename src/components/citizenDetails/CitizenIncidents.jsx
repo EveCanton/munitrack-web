@@ -1,5 +1,4 @@
-
-import './CitizenDetails.css';
+import "./CitizenDetails.css";
 
 const CitizenIncidents = ({ ciudadano }) => {
   return (
@@ -21,19 +20,25 @@ const CitizenIncidents = ({ ciudadano }) => {
                 </tr>
               </thead>
               <tbody>
-                {ciudadano.incidencias.map(incidence => (
+                {ciudadano.incidencias.map((incidence) => (
                   <tr key={incidence.id}>
                     <td>{incidence.fechaIngreso}</td>
                     <td>{incidence.tipo}</td>
                     <td className="text-center">
-                      <button className={`btn btn-sm rounded-pill ${
-                        incidence.estado === "Started" ? "btn-warning" :
-                        incidence.estado === "InProgress" ? "btn-primary" :
-                        "btn-success"
-                      }`}>
-                        {incidence.estado === "Started" ? "Empezado" :
-                        incidence.estado === "InProgress" ? "En proceso" :
-                        "Finalizado"}
+                      <button
+                        className={`btn btn-sm rounded-pill ${
+                          incidence.estado === "Started"
+                            ? "btn-warning"
+                            : incidence.estado === "InProgress"
+                            ? "btn-primary"
+                            : "btn-success"
+                        }`}
+                      >
+                        {incidence.estado === "Started"
+                          ? "Empezado"
+                          : incidence.estado === "InProgress"
+                          ? "En proceso"
+                          : "Finalizado"}
                       </button>
                     </td>
                     <td>{incidence.observacion}</td>
@@ -48,7 +53,7 @@ const CitizenIncidents = ({ ciudadano }) => {
         </div>
       </div>
       <div className="d-flex justify-content-end mt-3 mb-3">
-        <button className="btn btn-primary" id='styleButton'>
+        <button className="btn btn-success">
           <i class="bi bi-plus-circle-fill"></i> Agregar Incidencia
         </button>
       </div>
