@@ -1,4 +1,4 @@
-import {ciudadanos} from './Citizen.js'
+import {ciudadanos} from '../../Citizen.js'
 
 import CitizenProfile from './CitizenProfile';
 import CitizenIncidents from './CitizenIncidents';
