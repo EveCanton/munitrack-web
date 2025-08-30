@@ -8,7 +8,6 @@ const CreateIncidence = () => {
       <h3 className="mb-4">Nueva Incidencia</h3>
 
       <div className="container">
-        {/* Primera fila */}
         <div className="row mb-3">
           <div className="col-md-4">
             <label htmlFor="date" className="form-label">Fecha de Ingreso</label>
@@ -36,8 +35,6 @@ const CreateIncidence = () => {
             </select>
           </div>
         </div>
-
-        {/* Segunda fila */}
         <div className="row mb-3">
           <div className="col-md-6">
             <label htmlFor="area" className="form-label">Área</label>
@@ -60,8 +57,6 @@ const CreateIncidence = () => {
             </select>
           </div>
         </div>
-
-        {/* Observación */}
         <div className="mb-3">
           <label htmlFor="observation" className="form-label">Observación</label>
           <textarea
@@ -71,8 +66,6 @@ const CreateIncidence = () => {
             placeholder="Describa la incidencia en detalle..."
           ></textarea>
         </div>
-
-        {/* Botones */}
         <div className="d-flex justify-content-end gap-2 mt-4">
           <button className="btn btn-outline-secondary">Cancelar</button>
           <button className="btn btn-primary" id='styleButton'>Guardar Incidencia</button>

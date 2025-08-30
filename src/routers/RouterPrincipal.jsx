@@ -4,8 +4,8 @@ import Login from "../components/login/Login";
 import CreateOperador from "../components/createOperator/CreateOperador";
 import CreateCitizen from "../components/createCitizen/CreateCitizen";
 import CitizenDetails from "../components/citizenDetails/CitizenDetails";
-import CreateIncidence from "../components/incidenceDetails/CreateIncidence";
 import IncidenceDetails from "../components/incidenceDetails/IncidenceDetails";
+
 
 
 const RouterPrincipal = () => {
