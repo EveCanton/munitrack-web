@@ -4,42 +4,42 @@ import { Form, FormGroup } from "react-bootstrap";
 import "./Login.css";
 
 const Login = ({ onLogin }) => {
-  const [dni, setDni] = useState("");
+  const [nLegajo, setNLegajo] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({
-    dni: false,
+    nLegajo: false,
     password: false,
-  });
+  })
 
-  const dniRef = useRef(null);
+  const nLegajoRef = useRef(null);
   const passwordRef = useRef(null);
 
   const navigate = useNavigate();
 
-  const handleChangeDni = (event) => {
-    setDni(event.target.value);
+  const handleChangeNlegajo = (event) => {
+    setNLegajo(event.target.value);
     setErrors((prevErrors) => ({
       ...prevErrors,
-      dni: false,
-    }));
-  };
+      nLegajo: false,
+    }))
+  }
 
   const handleChangePassword = (event) => {
     setPassword(event.target.value);
     setErrors((prevErrors) => ({
       ...prevErrors,
       password: false,
-    }));
-  };
+    }))
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!dni) {
-      alert("Debe ingresar un dni.");
-      dniRef.current.focus();
+    if (!nLegajo) {
+      alert("Debe ingresar su N° de Legajo.");
+      nLegajoRef.current.focus();
       setErrors((prevErrors) => ({
         ...prevErrors,
-        dni: true,
+        nLegajo: true,
       }));
       return;
     }
@@ -52,11 +52,18 @@ const Login = ({ onLogin }) => {
         password: true,
       }));
       return;
+      
     }
 
     onLogin();
     navigate("/citizenSearch");
-  };
+   } 
+    
+    const handleRegisterClick = () => {
+      navigate("/operators/new")
+    } 
+  
+    
 
   return (
     <div
@@ -68,12 +75,12 @@ const Login = ({ onLogin }) => {
         <Form onSubmit={handleSubmit}>
           <FormGroup className="mb-2">
             <Form.Control
-              className={errors.dni ? "border border-danger" : ""}
+              className={errors.nLegajo ? "border border-danger" : ""}
               type="text"
-              placeholder="N° de Legajo o DNI"
-              value={dni}
-              onChange={handleChangeDni}
-              ref={dniRef}
+              placeholder="N° de Legajo"
+              value={nLegajo}
+              onChange={handleChangeNlegajo}
+              ref={nLegajoRef}
             />
             {errors.email && (
               <p className="text-danger mt-2">Debe completar el campo email</p>
@@ -114,9 +121,7 @@ const Login = ({ onLogin }) => {
             Olvide mi{" "}
             <a href="">
               Contraseña?
-              <a Link to="/Operator" className="ms-2">
-                Registrarme
-              </a>
+              <button className="ms-2" id="link-style" onClick={handleRegisterClick}> Registrarme </button>
             </a>
           </p>
         </Form>

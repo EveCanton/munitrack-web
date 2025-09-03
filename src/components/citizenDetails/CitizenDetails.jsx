@@ -7,7 +7,7 @@ import TopBar from "../topBar/TopBar.jsx";
 const CitizenDetails = () => {
   const ciudadano = ciudadanos[0]; // Simulamos que mostramos el primer ciudadano
   return (
-    <div className="vh-100 bg-violet">
+    <div>
       <TopBar />
       <CitizenProfile ciudadano={ciudadano} />
       <CitizenIncidents ciudadano={ciudadano} />

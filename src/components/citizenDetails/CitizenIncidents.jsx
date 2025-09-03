@@ -1,6 +1,13 @@
 import "./CitizenDetails.css";
+import { useNavigate } from "react-router-dom";
 
 const CitizenIncidents = ({ ciudadano }) => {
+  const navigate = useNavigate();
+
+  const handleAddIncidenceClick = () => {
+      navigate("/incidence/new")
+    };
+
   return (
     <div className="container mt-4">
       <div className="card shadow rounded bg-white">
@@ -53,7 +60,7 @@ const CitizenIncidents = ({ ciudadano }) => {
         </div>
       </div>
       <div className="d-flex justify-content-end mt-3 mb-3">
-        <button className="btn btn-success">
+        <button className="btn btn-success" id="styleButton" onClick={handleAddIncidenceClick}>
           <i class="bi bi-plus-circle-fill"></i> Agregar Incidencia
         </button>
       </div>
