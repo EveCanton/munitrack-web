@@ -4,7 +4,7 @@ import { Modal, Button } from "react-bootstrap";
 const UserNotFound = ({ show = true, handleClose = () => {} }) => {
   return (
     <Modal show={show} onHide={handleClose} centered>
-      <Modal.Header closeButton className="bg-violet text-white">
+      <Modal.Header closeButton className="text-white">
         <Modal.Title>Ciudadano no encontrado</Modal.Title>
       </Modal.Header>
       <Modal.Body>
