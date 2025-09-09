@@ -1,3 +1,13 @@
 #navbar{
     background-color: #428bc4 ;
+    color: white;            
+ }
+
+#navbar .navbar-brand,
+#navbar i {
+  color: white; 
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100; /* Muy delgada */
+    font-size: 1.8rem; /* Ajusta según quieras */
 }
+

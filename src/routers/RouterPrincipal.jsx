@@ -5,6 +5,7 @@ import CreateCitizen from "../components/createCitizen/CreateCitizen";
 import CitizenDetails from "../components/citizenDetails/CitizenDetails";
 import IncidenceDetails from "../components/incidenceDetails/IncidenceDetails";
 import UserNotFound from "../components/usernotfound/UserNotFound";
+import CitizenSearch from "../components/citizenSearch/CitizenSearch";
 
 const RouterPrincipal = () => {
   return (
@@ -15,8 +16,9 @@ const RouterPrincipal = () => {
         <Route path="/operators/new" element={<CreateOperador />} />
         <Route path="/citizens/new" element={<CreateCitizen />} />
         <Route path="/citizens/:id" element={<CitizenDetails />} />
-        <Route path="/incidence/new" element={<IncidenceDetails />} />
+        <Route path="/incidenceDetails" element={<IncidenceDetails />} />
         <Route path="/UserNotFound" element={<UserNotFound />} />
+      <Route path="/CitizenSearch" element={<CitizenSearch />} />
       </Routes>
     </BrowserRouter>
   );
