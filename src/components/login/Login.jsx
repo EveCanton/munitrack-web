@@ -10,6 +10,11 @@ const Login = ({ onLogin }) => {
     nLegajo: false,
     password: false,
   })
+  const operadores = [
+    { nLegajo: 1111, password: "admin", nombre: "Evelyn" },
+    { nLegajo: 1002, password: "admin123", nombre: "Luis" },
+    { nLegajo: 1003, password: "soporte456", nombre: "Ana" },
+  ];
 
   const nLegajoRef = useRef(null);
   const passwordRef = useRef(null);
@@ -54,6 +59,13 @@ const Login = ({ onLogin }) => {
       return;
       
     }
+    const operador = operadores.find(
+    (op) => op.nLegajo.toString() === nLegajo && op.password === password
+    );
+    if (!operador) {
+      setErrors((prev) => ({ ...prev, credentials: true }));
+      return;
+    }
 
     onLogin();
     navigate("/citizenSearch");
@@ -62,7 +74,9 @@ const Login = ({ onLogin }) => {
     const handleRegisterClick = () => {
       navigate("/operators/new")
     } 
-  
+    const handleForgotPassword = () =>{
+      navigate("/ForgotPassword")
+    }
     
 
   return (
@@ -118,11 +132,8 @@ const Login = ({ onLogin }) => {
             </button>
           </div>
           <p className="text-end mt-2">
-            Olvide mi{" "}
-            <a href="">
-              Contraseña?
-              <button className="ms-2" id="link-style" onClick={handleRegisterClick}> Registrarme </button>
-            </a>
+              <button className="ms-2" id="link-style" onClick={handleForgotPassword}>Olvide mi Contraseña </button>
+
           </p>
         </Form>
       </div>

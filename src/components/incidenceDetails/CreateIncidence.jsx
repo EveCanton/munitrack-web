@@ -1,7 +1,12 @@
-
 import './CreateIncidence.css';
+import { useNavigate } from "react-router-dom";
  
 const CreateIncidence = () => {
+  const navigate = useNavigate();
+  const handleCancel = () => {
+      navigate("/citizens/:id")
+    };
+
   return (
     <div className="container mt-4">
     <div className="card shadow-sm rounded bg-white p-4">
@@ -67,7 +72,7 @@ const CreateIncidence = () => {
           ></textarea>
         </div>
         <div className="d-flex justify-content-end gap-2 mt-4">
-          <button className="btn btn-outline-secondary">Cancelar</button>
+          <button className="btn btn-outline-secondary" onClick={handleCancel}>Cancelar</button>
           <button className="btn btn-primary" id='styleButton'>Guardar Incidencia</button>
         </div>
       </div>

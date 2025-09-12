@@ -15,4 +15,4 @@ const CitizenDetails = () => {
   );
 };
 
-export default CitizenDetails;
+export default CitizenDetails;

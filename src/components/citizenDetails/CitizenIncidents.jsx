@@ -5,11 +5,12 @@ const CitizenIncidents = ({ ciudadano }) => {
   const navigate = useNavigate();
 
   const handleAddIncidenceClick = () => {
-      navigate("/incidence/new")
+      navigate("/incidenceDetails")
     };
 
   return (
     <div className="container mt-4">
+      
       <div className="card shadow rounded bg-white">
         <div className="card-body">
           <h3 className="card-title mb-3">Lista de Incidencias</h3>

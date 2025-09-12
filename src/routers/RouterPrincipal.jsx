@@ -1,11 +1,12 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Login from "../components/login/Login";
-import CreateOperador from "../components/createOperator/CreateOperador";
+import CreateOperador from "../components/createOperator/CreateOperator";
 import CreateCitizen from "../components/createCitizen/CreateCitizen";
 import CitizenDetails from "../components/citizenDetails/CitizenDetails";
 import IncidenceDetails from "../components/incidenceDetails/IncidenceDetails";
 import UserNotFound from "../components/usernotfound/UserNotFound";
 import CitizenSearch from "../components/citizenSearch/CitizenSearch";
+import ForgotPassword from "../components/forgotPassword/ForgotPassword";
 
 const RouterPrincipal = () => {
   return (
@@ -18,7 +19,8 @@ const RouterPrincipal = () => {
         <Route path="/citizens/:id" element={<CitizenDetails />} />
         <Route path="/incidenceDetails" element={<IncidenceDetails />} />
         <Route path="/UserNotFound" element={<UserNotFound />} />
-      <Route path="/CitizenSearch" element={<CitizenSearch />} />
+        <Route path="/CitizenSearch" element={<CitizenSearch />} />
+        <Route path="/ForgotPassword" element={<ForgotPassword />}/>
       </Routes>
     </BrowserRouter>
   );

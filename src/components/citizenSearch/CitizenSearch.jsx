@@ -1,6 +1,7 @@
 import { Form, InputGroup, Button, Card, Row, Col } from "react-bootstrap";
 import { Search } from "lucide-react";
-import TopBar from "../topbar/TopBar";
+import TopBar from "../topBar/TopBar.jsx";
+import './CitizenSearch.css'
 
 const CitizenSearch = ({ onSearch, search }) => {
   const handleSearch = (event) => {
@@ -22,8 +23,7 @@ const CitizenSearch = ({ onSearch, search }) => {
                 value={search}
                 style={{ borderRadius: "8px 0 0 8px" }}
               />
-              <Button
-                variant="success"
+              <Button id="buttonEnter"
                 className="d-flex align-items-center gap-2"
                 style={{ borderRadius: "0 8px 8px 0" }}
               >
@@ -34,9 +34,7 @@ const CitizenSearch = ({ onSearch, search }) => {
           </Form.Group>
         </Card>
 
-        {/* Sección con dos cards separados */}
         <Row>
-          {/* Card consultas recientes */}
           <Col md={8}>
             <Card className="p-3 shadow-sm mb-3" style={{ borderRadius: "12px" }}>
               <h6 className="fw-bold">Consultas recientes</h6>
@@ -73,14 +71,13 @@ const CitizenSearch = ({ onSearch, search }) => {
             </Card>
           </Col>
 
-          {/* Card contador ciudadanos */}
           <Col md={4}>
             <Card
               className="p-3 shadow-sm d-flex flex-column justify-content-center align-items-center"
               style={{ borderRadius: "12px", minHeight: "150px" }}
             >
               <h6 className="fw-bold">Ciudadanos Ingresados</h6>
-              <h2 className="text-success">117</h2>
+              <h2 className="text-success" id="number">117</h2>
               <p className="text-muted mb-0">3 Nuevos Ingresados</p>
             </Card>
           </Col>

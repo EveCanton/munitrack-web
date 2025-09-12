@@ -7,7 +7,33 @@
 #navbar i {
   color: white; 
     font-family: 'Raleway', sans-serif;
-    font-weight: 500; /* Muy delgada */
-    font-size: 2 rem; /* Ajusta según quieras */
+    font-weight: 500; 
+    font-size: 2 rem; 
 }
 
+#navbar .navbar-brand {
+  margin-left: -40px;
+}
+
+#navbar p {
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.nav-btn {
+  background: none;       
+  border: none;        
+  color: white;        
+  font-size: 1rem;        
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-btn:hover {
+  color: #0DB4A1;
+  transform: scale(0.9);
+  font-weight: bold;
+  transform-origin: center;
+}
