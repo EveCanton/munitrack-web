@@ -1,20 +1,20 @@
+import TopBar from "../topBar/TopBar";
 import "./CreateCitizen.css";
 
 const CreateCitizen = () => {
   return (
+    <div>
+      <TopBar/>
     <div className="vh-100 d-flex">
-      {/* Columna izquierda */}
       <div className="col-4 d-flex flex-column justify-content-center align-items-center text-white bg-fondo p-5">
         <h2 className="fw-bold">MuniTrack</h2>
       </div>
 
-      {/* Columna derecha */}
       <div className="col-8 d-flex align-items-center justify-content-center">
         <div className="p-4 bg-white rounded shadow-lg w-100">
-          {/* Contenedor principal */}
+
           <h2 className="text-center mb-0 ml-0">Registrar ciudadano</h2>
 
-          {/* CENTRAMOS inputs debajo del h2 */}
           <form className="d-flex flex-column align-items-center">
             <div className="col-6">
               <label htmlFor="inputNombre" className="form-label">
@@ -48,13 +48,13 @@ const CreateCitizen = () => {
               <input type="tel" className="form-control mb-4" id="inputCelular" placeholder="Celular" />
             </div>
 
-            {/* Botón centrado */}
             <button type="submit" className="btn btn-primary col-5" id="button-register">
               Registrar ciudadano
             </button>
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 };

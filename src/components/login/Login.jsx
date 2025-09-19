@@ -127,7 +127,7 @@ const Login = ({ onLogin }) => {
             </label>
           </div>
           <div className="d-grid">
-            <button className="btn bg btn-success" type="submit">
+            <button className="btn text-white" id="button-ingresar" type="submit">
               Ingresar
             </button>
           </div>

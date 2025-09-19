@@ -1,7 +1,10 @@
 import "./CreateOperator.css";
+import TopBar from "../topBar/TopBar.jsx";
 
 const CreateOperator = () => {
   return (
+    <div>
+    <TopBar />
     <div className="vh-100 d-flex">
       <div className="col-4 d-flex flex-column justify-content-center align-items-center text-white bg-fondo p-5">
         <h2 className="fw-bold">MuniTrack</h2>
@@ -60,6 +63,8 @@ const CreateOperator = () => {
         </div>
       </div>
     </div>
+  </div>
+
   );
 };
 

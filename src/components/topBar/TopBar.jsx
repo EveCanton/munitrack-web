@@ -8,12 +8,18 @@ const TopBar = () => {
     navigate("/login");
   };
 
-  const handleGoToRegistrCitizen = () => {
+  const handleGoToRegisterCitizen = () => {
     navigate("/citizens/new");
   };
 
-  const handleGoToRegistrOperator = () => {
+  const handleGoToRegisterOperator = () => {
     navigate("/operators/new");
+  };
+  const handleGoToHome = () => {
+    navigate("/CitizenSearch");
+  };
+  const handleGoToArea = () =>{
+navigate("/AreaDetails");
   };
 
   const operador = {
@@ -27,11 +33,14 @@ const TopBar = () => {
 
         <div className="d-flex align-items-center gap-4">
           <span className="navbar-brand mb-0 h1">MuniTrack</span>
-          <button className="nav-btn">Areas</button>
-          <button className="nav-btn" onClick={handleGoToRegistrOperator}>
+          <button className="nav-btn" onClick={handleGoToHome}>
+            Home
+          </button>
+          <button className="nav-btn" onClick={handleGoToArea}>Areas</button>
+          <button className="nav-btn" onClick={handleGoToRegisterOperator}>
             Registrar Operador
           </button>
-          <button className="nav-btn" onClick={handleGoToRegistrCitizen}>
+          <button className="nav-btn" onClick={handleGoToRegisterCitizen}>
             Registrar Ciudadano
           </button>
         </div>

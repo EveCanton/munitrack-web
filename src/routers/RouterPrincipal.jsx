@@ -7,6 +7,7 @@ import IncidenceDetails from "../components/incidenceDetails/IncidenceDetails";
 import UserNotFound from "../components/usernotfound/UserNotFound";
 import CitizenSearch from "../components/citizenSearch/CitizenSearch";
 import ForgotPassword from "../components/forgotPassword/ForgotPassword";
+import AreaDetails from "../components/areaDetails/AreaDetails";
 
 const RouterPrincipal = () => {
   return (
@@ -21,6 +22,7 @@ const RouterPrincipal = () => {
         <Route path="/UserNotFound" element={<UserNotFound />} />
         <Route path="/CitizenSearch" element={<CitizenSearch />} />
         <Route path="/ForgotPassword" element={<ForgotPassword />}/>
+        <Route path="/AreaDetails" element={<AreaDetails/>}/>
       </Routes>
     </BrowserRouter>
   );
