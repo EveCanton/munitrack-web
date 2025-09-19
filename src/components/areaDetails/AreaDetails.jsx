@@ -1,6 +1,9 @@
 import "./AreaDetails.css"; 
 import { FaUsers, FaHandsHelping, FaHome, FaBook, FaGlobe } from "react-icons/fa";
 import TopBar from "../topBar/TopBar.jsx";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const AreaDetails = () => {
   const mesas = [
@@ -35,16 +38,34 @@ const AreaDetails = () => {
       color: "#f39c12",
     },
   ];
+  
+
+  const settings = {
+    dots: false,          // bolitas de navegación
+    infinite: true,      // loop infinito
+    speed: 500,
+    slidesToShow: 4,     // cantidad de tarjetas visibles
+    slidesToScroll: 1,   // cantidad que se mueven por vez
+    
+    responsive: [
+      {
+        breakpoint: 768, // para tablets y móviles
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <div>
       <TopBar />
       <div id="fondo">
-        <div className="container py-4">
-          <h2 className="text-white mb-4">Áreas</h2>
-          <div className="row">
+         <h2>Áreas</h2>
+        <div className="container py-3">
+          <Slider {...settings}>
             {mesas.map((mesa, idx) => (
-              <div key={idx} className="col mb-4 fixed-card-width">
+              <div key={idx} className="area-card-wrapper">
                 <div className="area-card">
                   <div
                     className="icon-circle"
@@ -67,7 +88,7 @@ const AreaDetails = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </Slider>
         </div>
       </div>
     </div>

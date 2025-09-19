@@ -11,7 +11,8 @@ const CitizenSearch = ({ onSearch, search }) => {
   return (
     <>
       <TopBar />
-      <div className="container mt-3">
+      <div id="fondo">
+      <div className="container mt-3" >
         {/* Card para el buscador */}
         <Card className="p-3 shadow-sm mb-3" style={{ borderRadius: "12px" }}>
           <Form.Group className="mb-0" controlId="searchCitizen">
@@ -82,6 +83,7 @@ const CitizenSearch = ({ onSearch, search }) => {
             </Card>
           </Col>
         </Row>
+      </div>
       </div>
     </>
   );

@@ -1,3 +1,8 @@
+/* cada slide (tarjeta dentro del carrusel) */
+.area-card-wrapper {
+  padding: 0 10px; /* separación entre tarjetas */
+}
+
 .area-card {
   position: relative;
   border-radius: 16px;
@@ -76,7 +81,7 @@
   background-repeat: no-repeat;
   width: 100%;
   min-height: 100vh;
-  padding: 2rem 0;
+  padding: 0;
 }
 
 
@@ -98,17 +103,28 @@
 
 
 .fixed-card-width {
-  flex: 0 0 250px; /* ancho fijo */
-  max-width: 250px; /* nunca más grande */
-  min-width: 250px; /* nunca más pequeña */
+  flex: 0 0 250px;
+  max-width: 250px;
+  min-width: 250px; 
 }
 .container {
   width: 100%;
-  max-width: 1200px; /* opcional */
+  max-width: 1200px;
   margin: 0 auto;
 }
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px !important; 
+  color: #000000 !important;  
+}
+h2{
+font-family:sans-serif;
+padding-left: 30%;
+padding-top: 15px;
 }
